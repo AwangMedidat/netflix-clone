@@ -16,7 +16,7 @@ function Thumbnail({ movie }: Props) {
         className="rounded-sm object-cover md:rounded"
         layout="fill"
       />
-      <h1 className="absolute bottom-4 left-3 text-2xl lg:text-2xl md:text-1xl">
+      <h1 className="absolute bottom-4 left-3 text-1xl lg:text-2xl md:text-1xl">
         {movie.title || movie.name}
       </h1>
     </div>
