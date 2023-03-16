@@ -101,7 +101,7 @@ function Modal() {
           <XIcon className="h-6 w-6" />
         </button>
 
-        <div className="flex space-x-16 rounded-b-md bg-[#181818]">
+        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-8">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-green-400">
@@ -114,12 +114,22 @@ function Modal() {
                 HD
               </div>
             </div>
-            <div>
+            <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
               <p className="w-5/6">{movie?.overview}</p>
               <div className="flex flex-col space-y-3 text-sm">
                 <div>
                   <span className="text-[gray]">Genres: </span>
                   {genres.map((genre) => genre.name).join(", ")}
+                </div>
+
+                <div>
+                  <span className="text-[gray]">Original languange: </span>
+                  {movie?.original_language}
+                </div>
+
+                <div>
+                  <span className="text-[gray]">Total votes: </span>
+                  {movie?.vote_count}
                 </div>
               </div>
             </div>
